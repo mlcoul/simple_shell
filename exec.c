@@ -1,4 +1,3 @@
-exec.c
 #include "shell.h"
 
 /**
