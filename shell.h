@@ -17,15 +17,19 @@
  */
 typedef struct Alias
 {
-    char *name;
-    char *value;
-    struct Alias *next;
+	char *name;
+	char *value;
+	struct Alias *next;
 } Alias_t;
 
-/* Global shell state structure */
-typedef struct shell_state {
-    Alias_t *alias_head;
-    int last_exit_status; /* Store the exit status of the last command */
+/**
+ * Global shell state structure
+ * shell_state - typedef to handle state struct
+ */
+typedef struct shell_state
+{
+	Alias_t *alias_head;
+	int last_exit_status; /* Store the exit status of the last command */
     /* other global states can be added here in the future */
 } ShellState;
 

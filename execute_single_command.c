@@ -19,7 +19,7 @@ int execute_single_command(char *command, ShellState *shell)
 
 	/* Handle "exit" command */
 	if (strcmp(args[0], "exit") == 0)
-		handle_exit(args,shell);
+		handle_exit(args, shell);
 
 	child_pid = fork();
 	if (child_pid == -1)

@@ -31,7 +31,7 @@ char *replace_dollar_question(char **cmd, ShellState *shellState)
 }
 
 /**
- * process_variable_replacement
+ * process_variable_replacement - processes
  * Processes variable replacement in the given command.
  * @cmd: The command to process.
  * @shellState: The shell's state.

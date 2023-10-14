@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * display_prompt - Displays a custom shell prompt to the user.
+ * disp_prompt - Displays a custom shell prompt to the user.
  * Description: Uses the leo_print function to print a custom prompt string.
  */
 
