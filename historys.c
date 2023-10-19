@@ -18,9 +18,9 @@ char *get_hist_files(info_t *info)
 	if (!buf)
 		return (NULL);
 	buf[0] = 0;
-	_strcpy(buf, dir);
-	_strcat(buf, "/");
-	_strcat(buf, HIST_FILE);
+	_strcpys(buf, dir);
+	_strcats(buf, "/");
+	_strcats(buf, HIST_FILE);
 	return (buf);
 }
 
@@ -97,7 +97,7 @@ int read_hist(info_t *info)
 	free(buf);
 	info->histcount = linecount;
 	while (info->histcount-- >= HIST_MAX)
-		delete_node_at_index(&(info->history), 0);
+		del_node_index(&(info->history), 0);
 	renumb_hist(info);
 	return (info->histcount);
 }
@@ -116,7 +116,7 @@ int build_hist_lists(info_t *info, char *buf, int linecount)
 
 	if (info->history)
 		node = info->history;
-	add_node_end(&node, buf, linecount);
+	ad_nodes_end(&node, buf, linecount);
 
 	if (!info->history)
 		info->history = node;

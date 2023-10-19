@@ -52,7 +52,7 @@ int _mycd(info_t *info)
 		else
 			chdir_ret = chdir(dir);
 	}
-	else if (_strcmp(info->argv[1], "-") == 0)
+	else if (_strcmps(info->argv[1], "-") == 0)
 	{
 		if (!_getenvi(info, "OLDPWD="))
 		{
